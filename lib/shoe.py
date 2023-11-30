@@ -1,4 +1,13 @@
-#!/usr/bin/env python3
+# shoe.py
 
 class Shoe:
-    pass
+    def __init__(self, brand, size):
+        if not isinstance(size, int):
+            raise ValueError("size must be an integer")
+        self.brand = brand
+        self.size = size
+        self.condition = "New"
+
+    def cobble(self):
+        print("The shoe has been repaired.")
+        self.condition = "New"
